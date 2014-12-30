@@ -1,1 +1,1 @@
-c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\GeoLocation.csproj;neutral
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\GeoLocation.csproj;neutral

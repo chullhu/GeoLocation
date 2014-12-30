@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+//using System.Collections.Generic;
+//using System.IO;
+//using System.Linq;
+//using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -14,11 +14,13 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Geolocation;
 
+
 namespace GeoLocation
 {
     public sealed partial class MainPage : Page
     {
         Geolocator geo = null;
+
         public MainPage()
         {
             this.InitializeComponent();

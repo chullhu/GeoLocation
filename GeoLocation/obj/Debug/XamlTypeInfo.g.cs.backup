@@ -59,6 +59,18 @@ namespace GeoLocation.GeoLocation_XamlTypeInfo
             {
                 xamlType = CreateXamlType(typeIndex);
             }
+            var userXamlType = xamlType as global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType;
+            if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
+            {
+                global::Windows.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForType(type);
+                if (libXamlType != null)
+                {
+                    if(libXamlType.IsConstructible || xamlType == null)
+                    {
+                        xamlType = libXamlType;
+                    }
+                }
+            }
             if (xamlType != null)
             {
                 _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
@@ -82,6 +94,18 @@ namespace GeoLocation.GeoLocation_XamlTypeInfo
             if(typeIndex != -1)
             {
                 xamlType = CreateXamlType(typeIndex);
+            }
+            var userXamlType = xamlType as global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType;
+            if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
+            {
+                global::Windows.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForName(typeName);
+                if (libXamlType != null)
+                {
+                    if(libXamlType.IsConstructible || xamlType == null)
+                    {
+                        xamlType = libXamlType;
+                    }
+                }
             }
             if (xamlType != null)
             {
@@ -124,15 +148,27 @@ namespace GeoLocation.GeoLocation_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
-            _typeNameTable[0] = "GeoLocation.MainPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable = new string[9];
+            _typeNameTable[0] = "GeoLocation.Main";
+            _typeNameTable[1] = "Object";
+            _typeNameTable[2] = "Double";
+            _typeNameTable[3] = "Int32";
+            _typeNameTable[4] = "GeoLocation.MainPage";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[7] = "System.Collections.ObjectModel.ObservableCollection`1<GeoLocation.Main>";
+            _typeNameTable[8] = "System.Collections.ObjectModel.Collection`1<GeoLocation.Main>";
 
-            _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::GeoLocation.MainPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable = new global::System.Type[9];
+            _typeTable[0] = typeof(global::GeoLocation.Main);
+            _typeTable[1] = typeof(global::System.Object);
+            _typeTable[2] = typeof(global::System.Double);
+            _typeTable[3] = typeof(global::System.Int32);
+            _typeTable[4] = typeof(global::GeoLocation.MainPage);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[7] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::GeoLocation.Main>);
+            _typeTable[8] = typeof(global::System.Collections.ObjectModel.Collection<global::GeoLocation.Main>);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -167,7 +203,22 @@ namespace GeoLocation.GeoLocation_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::GeoLocation.MainPage(); }
+        private object Activate_0_Main() { return new global::GeoLocation.Main(); }
+        private object Activate_4_MainPage() { return new global::GeoLocation.MainPage(); }
+        private object Activate_7_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::GeoLocation.Main>(); }
+        private object Activate_8_Collection() { return new global::System.Collections.ObjectModel.Collection<global::GeoLocation.Main>(); }
+        private void VectorAdd_7_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::GeoLocation.Main>)instance;
+            var newItem = (global::GeoLocation.Main)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_8_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::GeoLocation.Main>)instance;
+            var newItem = (global::GeoLocation.Main)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -179,30 +230,222 @@ namespace GeoLocation.GeoLocation_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  GeoLocation.MainPage
-                userType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+            case 0:   //  GeoLocation.Main
+                userType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_0_Main;
+                userType.AddMemberName("temp");
+                userType.AddMemberName("pressure");
+                userType.AddMemberName("humidity");
+                userType.AddMemberName("temp_min");
+                userType.AddMemberName("temp_max");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Object
                 xamlType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+            case 2:   //  Double
                 xamlType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  Int32
+                xamlType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  GeoLocation.MainPage
+                userType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
+                userType.AddMemberName("DayList");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  System.Collections.ObjectModel.ObservableCollection`1<GeoLocation.Main>
+                userType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<GeoLocation.Main>"));
+                userType.CollectionAdd = VectorAdd_7_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 8:   //  System.Collections.ObjectModel.Collection`1<GeoLocation.Main>
+                userType = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_8_Collection;
+                userType.CollectionAdd = VectorAdd_8_Collection;
+                xamlType = userType;
                 break;
             }
             return xamlType;
         }
 
+        private global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider> _otherProviders;
+        private global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider> OtherProviders
+        {
+            get
+            {
+                if(_otherProviders == null)
+                {
+                    _otherProviders = new global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider>();
+                    global::Windows.UI.Xaml.Markup.IXamlMetadataProvider provider;
+                    provider = new global::Microsoft.Advertising.Mobile.UI.UI_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
+                    _otherProviders.Add(provider); 
+                }
+                return _otherProviders;
+            }
+        }
 
+        private global::Windows.UI.Xaml.Markup.IXamlType CheckOtherMetadataProvidersForName(string typeName)
+        {
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType = null;
+            global::Windows.UI.Xaml.Markup.IXamlType foundXamlType = null;
+            foreach(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider xmp in OtherProviders)
+            {
+                xamlType = xmp.GetXamlType(typeName);
+                if(xamlType != null)
+                {
+                    if(xamlType.IsConstructible)    // not Constructible means it might be a Return Type Stub
+                    {
+                        return xamlType;
+                    }
+                    foundXamlType = xamlType;
+                }
+            }
+            return foundXamlType;
+        }
+
+        private global::Windows.UI.Xaml.Markup.IXamlType CheckOtherMetadataProvidersForType(global::System.Type type)
+        {
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType = null;
+            global::Windows.UI.Xaml.Markup.IXamlType foundXamlType = null;
+            foreach(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider xmp in OtherProviders)
+            {
+                xamlType = xmp.GetXamlType(type);
+                if(xamlType != null)
+                {
+                    if(xamlType.IsConstructible)    // not Constructible means it might be a Return Type Stub
+                    {
+                        return xamlType;
+                    }
+                    foundXamlType = xamlType;
+                }
+            }
+            return foundXamlType;
+        }
+
+        private object get_0_Main_temp(object instance)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            return that.temp;
+        }
+        private void set_0_Main_temp(object instance, object Value)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            that.temp = (global::System.Double)Value;
+        }
+        private object get_1_Main_pressure(object instance)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            return that.pressure;
+        }
+        private void set_1_Main_pressure(object instance, object Value)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            that.pressure = (global::System.Int32)Value;
+        }
+        private object get_2_Main_humidity(object instance)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            return that.humidity;
+        }
+        private void set_2_Main_humidity(object instance, object Value)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            that.humidity = (global::System.Int32)Value;
+        }
+        private object get_3_Main_temp_min(object instance)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            return that.temp_min;
+        }
+        private void set_3_Main_temp_min(object instance, object Value)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            that.temp_min = (global::System.Double)Value;
+        }
+        private object get_4_Main_temp_max(object instance)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            return that.temp_max;
+        }
+        private void set_4_Main_temp_max(object instance, object Value)
+        {
+            var that = (global::GeoLocation.Main)instance;
+            that.temp_max = (global::System.Double)Value;
+        }
+        private object get_5_MainPage_DayList(object instance)
+        {
+            var that = (global::GeoLocation.MainPage)instance;
+            return that.DayList;
+        }
+        private void set_5_MainPage_DayList(object instance, object Value)
+        {
+            var that = (global::GeoLocation.MainPage)instance;
+            that.DayList = (global::System.Collections.ObjectModel.ObservableCollection<global::GeoLocation.Main>)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::GeoLocation.GeoLocation_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "GeoLocation.Main.temp":
+                userType = (global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType)GetXamlTypeByName("GeoLocation.Main");
+                xamlMember = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlMember(this, "temp", "Double");
+                xamlMember.Getter = get_0_Main_temp;
+                xamlMember.Setter = set_0_Main_temp;
+                break;
+            case "GeoLocation.Main.pressure":
+                userType = (global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType)GetXamlTypeByName("GeoLocation.Main");
+                xamlMember = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlMember(this, "pressure", "Int32");
+                xamlMember.Getter = get_1_Main_pressure;
+                xamlMember.Setter = set_1_Main_pressure;
+                break;
+            case "GeoLocation.Main.humidity":
+                userType = (global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType)GetXamlTypeByName("GeoLocation.Main");
+                xamlMember = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlMember(this, "humidity", "Int32");
+                xamlMember.Getter = get_2_Main_humidity;
+                xamlMember.Setter = set_2_Main_humidity;
+                break;
+            case "GeoLocation.Main.temp_min":
+                userType = (global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType)GetXamlTypeByName("GeoLocation.Main");
+                xamlMember = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlMember(this, "temp_min", "Double");
+                xamlMember.Getter = get_3_Main_temp_min;
+                xamlMember.Setter = set_3_Main_temp_min;
+                break;
+            case "GeoLocation.Main.temp_max":
+                userType = (global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType)GetXamlTypeByName("GeoLocation.Main");
+                xamlMember = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlMember(this, "temp_max", "Double");
+                xamlMember.Getter = get_4_Main_temp_max;
+                xamlMember.Setter = set_4_Main_temp_max;
+                break;
+            case "GeoLocation.MainPage.DayList":
+                userType = (global::GeoLocation.GeoLocation_XamlTypeInfo.XamlUserType)GetXamlTypeByName("GeoLocation.MainPage");
+                xamlMember = new global::GeoLocation.GeoLocation_XamlTypeInfo.XamlMember(this, "DayList", "System.Collections.ObjectModel.ObservableCollection`1<GeoLocation.Main>");
+                xamlMember.Getter = get_5_MainPage_DayList;
+                xamlMember.Setter = set_5_MainPage_DayList;
+                break;
+            }
             return xamlMember;
         }
     }
