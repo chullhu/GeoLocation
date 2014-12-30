@@ -30,3 +30,13 @@ C:\Users\Дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLoc
 C:\Users\Дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\obj\Release\qualifiers.txt.intermediate
 C:\Users\Дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\obj\Release\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\obj\Release\ProjectArchitectures.txt
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Release\Microsoft.Advertising.Mobile.Common.winmd
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Release\Microsoft.Advertising.Mobile.Common.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Release\Microsoft.Advertising.Mobile.Display.winmd
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Release\Microsoft.Advertising.Mobile.Display.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Release\Microsoft.Advertising.Mobile.UI.winmd
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Release\Microsoft.Advertising.Mobile.UI.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Release\Newtonsoft.Json.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Release\Newtonsoft.Json.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\obj\Release\GeoLocation.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\obj\Release\GeoLocation.csproj.GenerateResource.Cache
