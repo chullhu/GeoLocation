@@ -1,58 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>CHTYLLHU</Machine>
+    <Machine>PC</Machine>
     <WindowsUser>Дмитрий</WindowsUser>
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>4642e95a-c3e6-4160-8b4b-da330453d058</PackageIdentityName>
-    <IntermediateOutputPath>c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\GeoLocation.exe">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\GeoLocation.exe">
       <PackagePath>GeoLocation.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\Assets\Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\Assets\SmallLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\Assets\SplashScreen.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\Assets\Square71x71Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\Assets\StoreLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\Assets\WideLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\GeoLocation.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\GeoLocation.xr.xml">
       <PackagePath>GeoLocation.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\дмитрий\documents\visual studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Дмитрий\Documents\Visual Studio 2013\Projects\GeoLocation\GeoLocation\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
