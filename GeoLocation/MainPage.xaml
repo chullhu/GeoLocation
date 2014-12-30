@@ -8,10 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button Margin="148,22,0,561" Content="GEO" Click="Button_Click"/>
-        <TextBlock x:Name="latitude" HorizontalAlignment="Left" Margin="95,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="39" FontSize="30"/>
-        <TextBlock x:Name="accuracy" HorizontalAlignment="Left" Margin="95,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="39" FontSize="30"/>
+    <Grid Background="#FF5B5C97">
+            <Button Margin="148,22,0,561" Content="GEO" Click="Button_Click"/>
+            <TextBlock x:Name="latitude" HorizontalAlignment="Left" Margin="95,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="39" FontSize="30"/>
+            <TextBlock x:Name="accuracy" HorizontalAlignment="Left" Margin="95,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="39" FontSize="30"/>
         <TextBlock x:Name="lohgitue" HorizontalAlignment="Left" Margin="95,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="39" FontSize="30"/>
     </Grid>
 </Page>
